@@ -1,0 +1,134 @@
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-container {
+  background: #fff;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title{
+padding-bottom: 10px;
+}
+.unorder-list {
+  list-style-type: none;
+}
+
+/* Menu Toggle for Small Screens */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-container {
+    position: absolute;
+    left: -100%;
+    width: 250px;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .menu-container.open {
+    left: 0;
+  }
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card Styling */
+.card-body {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card-body:hover {
+  transform: scale(1.02);
+}
+
+.card-body img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Responsive Text */
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
+/* Rating */
+.rating {
+  font-size: 14px;
+  color: #f39c12;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 8px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-yellow {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.btn-yellow:hover {
+  background-color: #e6b800;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn-white:hover {
+  background-color: black;
+  color: white;
+}
